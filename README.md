@@ -65,16 +65,6 @@ A modern weather application built with **React (Vite)**, **Tailwind CSS**, **Sh
 └── 📄 vite.config.ts  # Vite configuration
 ```
 
-## 📝 To-Do
-
-- [ ] Add **weekly forecast**
-- [ ] Support **multiple language translations**
-- [ ] Improve UI with **animations**
-
-## 📜 License
-
-This project is **MIT Licensed**. Feel free to use and modify it!
-
 ## 🌟 Show Your Support
 
-If you like this project, give it a ⭐ on [GitHub](https://github.com/yourusername/weather-app)! 😊
+If you like this project, give it a ⭐ on [GitHub](https://github.com/bishalmoktan/weather-app)! 😊
