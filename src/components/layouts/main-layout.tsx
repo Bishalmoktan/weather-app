@@ -9,11 +9,11 @@ const MainLayout = () => {
       <SidebarProvider>
         <AppSidebar />
 
-        <div>
-          <SidebarTrigger />
+        <main className="px-2">
+          <SidebarTrigger className="text-white" />
           <SearchBar />
           <Outlet />
-        </div>
+        </main>
       </SidebarProvider>
     </div>
   );

@@ -3,6 +3,7 @@ import {
   CloudRain,
   Droplets,
   Eye,
+  MapPin,
   Sunrise,
   Sunset,
   Wind,
@@ -31,6 +32,12 @@ export default function CurrentWeather() {
         ) : data ? (
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="overflow-hidden">
+              <CardHeader>
+                <CardTitle className="flex gap-2">
+                  <MapPin className="h-5 w-5" />
+                  {data.name}, {data.sys.country}
+                </CardTitle>
+              </CardHeader>
               <CardContent className="p-6">
                 <div className="mb-6 flex items-end justify-between">
                   <div>

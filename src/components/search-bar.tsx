@@ -22,7 +22,7 @@ const SearchBar = () => {
     <input
       type="text"
       placeholder="Search for cities"
-      className="bg-[#202b3b] text-gray-200 focus:outline-none py-2 px-4 w-3xl rounded-md mt-2 border"
+      className="bg-[#202b3b] text-gray-200 focus:outline-none py-2 px-4 w-[80vw] md:w-3xl rounded-md mt-2 border"
       value={input}
       onChange={(e) => setInput(e.target.value)}
       onKeyDown={handleKeyDown}
