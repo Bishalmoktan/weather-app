@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { formatTime } from "@/lib/utils";
+import { formatTime, getWeatherIcon } from "@/lib/utils";
 import { useUserLocation } from "@/hooks/use-user-location";
 import { useWeather } from "@/hooks/use-weather";
 
@@ -33,12 +33,21 @@ export default function CurrentWeather() {
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="overflow-hidden">
               <CardHeader>
-                <CardTitle className="flex gap-2">
-                  <MapPin className="h-5 w-5" />
-                  {data.name}, {data.sys.country}
+                <CardTitle className="flex justify-between">
+                  <div className="flex gap-2 items-center">
+                    <MapPin className="h-5 w-5" />
+                    {data.name}, {data.sys.country}
+                  </div>
+
+                  <div>
+                    <img
+                      className="w-[100px]"
+                      src={getWeatherIcon(data.weather[0].icon)}
+                    />
+                  </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="">
                 <div className="mb-6 flex items-end justify-between">
                   <div>
                     <p className="text-5xl font-bold">{data.main.temp}°C</p>

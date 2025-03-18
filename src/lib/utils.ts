@@ -24,3 +24,7 @@ export const formatDate = (timestamp: number, timezone: number) => {
     timeZone: "UTC",
   });
 };
+
+export const getWeatherIcon = (iconCode: string) => {
+  return `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+};

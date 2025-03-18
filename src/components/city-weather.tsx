@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MapPin } from "lucide-react";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { formatDate } from "@/lib/utils";
+import { formatDate, getWeatherIcon } from "@/lib/utils";
 import { useWeatherByCity } from "@/hooks/use-weather-by-city";
 import { AxiosError } from "axios";
 
@@ -42,11 +42,17 @@ const CityWeather = () => {
               {formatDate(data.dt, data.timezone)}
             </CardDescription>
           </div>
-          <div>
-            <p className="text-xl font-bold">{data.main.temp}°C</p>
-            <p className="text-muted-foreground">
-              {data.weather[0]?.description}
-            </p>
+          <div className="flex items-center gap-4">
+            <img
+              className="w-[100px]"
+              src={getWeatherIcon(data.weather[0].icon)}
+            />
+            <div>
+              <p className="text-xl font-bold">{data.main.temp}°C</p>
+              <p className="text-muted-foreground">
+                {data.weather[0]?.description}
+              </p>
+            </div>
           </div>
         </div>
       </Card>
